@@ -2,22 +2,22 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { addValue, reduceValue } from './actions';
 
-const Counter = ({ value }) => {
+const Counter = (props) => {
   return (
     <div>
       <button
-        onClick={() => { reduceValue() }}
+        onClick={() => { props.reduceValue() }}
       >-</button>
-      <h1>{value}</h1>
+      <h1>{props.value}</h1>
       <button
-        onClick={() => { addValue() }}
+        onClick={() => { props.addValue() }}
       >+</button>
     </div>
   );
 };
 
 const mapStateToProps = (state) => {
-  return { value: state.value }
+  return { value: state.value };
 };
 
 

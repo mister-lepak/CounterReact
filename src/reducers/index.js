@@ -2,7 +2,6 @@ import { combineReducers } from 'redux';
 
 
 const valueProcessor = (state = 0, action) => {
-  console.log(state);
   switch(action.type) {
     case 'VALUE_ADD':
       return state + 1;
