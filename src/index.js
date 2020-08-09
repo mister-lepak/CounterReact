@@ -8,8 +8,10 @@ import reducers from './reducers';
 
 const App = () => {
   return (
-    <div>
-      <h1>Welcome to the counter app</h1>
+    <div class="ui four column centered grid">
+      <div class="row">
+        <h1 class="ui dividing header">Welcome to the counter app</h1>
+      </div>
       <Counter />
     </div>
   );

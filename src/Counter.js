@@ -4,14 +4,25 @@ import { addValue, reduceValue } from './actions';
 
 const Counter = (props) => {
   return (
-    <div>
-      <button
+    <div class="row">
+      <div
+        class="ui button center aligned column"
         onClick={() => { props.reduceValue() }}
-      >-</button>
-      <h1>{props.value}</h1>
-      <button
+      >
+        <i class="minus icon"/>
+      </div>
+      <div
+        class="ui labeled center aligned column">
+      <h1>
+        {props.value}
+      </h1>
+      </div>
+      <div
+        class="ui button center aligned column"
         onClick={() => { props.addValue() }}
-      >+</button>
+      >
+        <i class="plus icon" />
+      </div>
     </div>
   );
 };
